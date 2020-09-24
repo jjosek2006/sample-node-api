@@ -8,6 +8,12 @@
  * Copyright Contributors to the Zowe Project.                                           *
  */
 
+/* 
+  Deployment strategies differ with SLA's and other requirements, and the actual deployment pipeline can
+  be separated from the code build piplines. Building and promoting artifacts to various stages (dev->test->staging->prod) seems to be a
+  good approach. The final prod deployment can be scheduled or on demand with approvals as well.
+*/
+
 pipeline {
     agent { label 'zowe-build' }
     stages {
