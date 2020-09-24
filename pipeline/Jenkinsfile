@@ -60,7 +60,7 @@ pipeline {
             <notify>
                 if (env.BRANCH_NAME == 'master') {
                 <notify>
-                <rollback>
+                <rollback_if_deployed>
                }
             }
         }
